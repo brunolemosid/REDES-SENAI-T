@@ -1,0 +1,19 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	brunolemos31.com.br. root.brunolemos31.com.br. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	servidor1.brunolemos31.com.br.
+@	IN	A	192.168.31.10
+;@	IN	AAAA	::1
+servidor1	IN	A	192.168.31.10
+dns1	IN	CNAME	servidor1.brunolemos31.com.br.
+dns2	IN	A	192.168.31.20
+cliente	IN	A	192.168.31.30
+www	IN	CNAME	servidor1.brunolemos31.com.br.
